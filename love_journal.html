@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Journal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Our Love Journal</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="countdown.html">Countdown Till I See You</a></li>
+                <li><a href="favoritethings.html">Favorite Tingz About You</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="carousel">
+            <div class="carousel-image">
+                <video controls>
+                    <source src="life.MP4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                    <p>The first time met you and didn't know it was the best day of my life... This is where our love journey began 🙈</p>
+               
+            </div>
+            <div class="carousel-image">
+                <img src="img_firstpic.jpeg" alt="Image 1">
+                <p>One of my very first pics I have of us on my phone. Our cuddles were amazing </p>
+            </div>
+            <div class="carousel-image">
+                <img src="img_tree.jpeg" alt="Image 2">
+                <p>Happy Valentine's Day, my breathtakingly beautiful girl. Words can't express how much I adore you, my love. <br>
+                    Thank you for gracing my life with your enchanting presence and introducing me to a love I never knew existed. <br>
+                    I cherish the way you radiate beauty both inside and out, how you navigate life with grace, and how you handle everything with such care. You're not only incredibly intelligent but also wonderfully silly, and every moment with you is a treasure beyond compare. <br>
+                    </p> 
+            </div>
+            <!-- Add more images with descriptions here -->
+            <div class="carousel-image">
+                <img src="img_food.jpeg" alt="Image 3">
+                <p>Thank you cooking endless meals with me, it is so cute lol. I will learn not to burn the chicken so I can cook for you haha (you make the best bacon<3)</p>
+            </div>
+            <div class="carousel-image">
+                <img src="img_sexylegs.jpeg" alt="Image 4">
+                <p>One of my fav pics of your body haha. Your legs are sooooooooo sexy babe. I am so inlove with your body like gah damn how are you so perfect!?!?!?!</p>
+            </div>
+            <div class="carousel-image">
+                <img src="img_endlesskisses.jpeg" alt="Image 1">
+                <p>Thank you for the endless kisses you give me. They always make my heart melt. Your pecks are the sweetest, and I'm so grateful to receive endless kisses from you. You truly fill my days with joy and love. 🥰😊</p>
+            </div>
+            <div class="carousel-image">
+                <img src="img_wifey.jpeg" alt="Image 1">
+                <p>Babe don't we go so well together??? like look at us!!! WE LOOK PERFECT FOR EACH OTHER! Sooo sorry you're stuck with me, there's no other way 🤪</p>
+            </div>
+            <div class="carousel-image">
+                <img src="img_perfect.jpeg" alt="Image 1">
+                <p>Like look here is another example of how well we go together and there is no other way but for us to get married and be together forever... WOOOOOO!!</p>
+            </div>
+            <div class="carousel-image">
+                <video controls>
+                    <source src="cuddles.MP4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Can't wait to cuddle with you every day baby. The best cuddle buddy I ever had. Your cuddles warm my soul. 💖</p>
+            </div>
+        </div>
+
+        <button class="next-button" onclick="prevImage()">
+            <svg class="empty" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="none" d="M0 0H24V24H0z"></path><path d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2zm-3.566 15.604c.881-.556 1.676-1.109 2.42-1.701C18.335 14.533 20 11.943 20 9c0-2.36-1.537-4-3.5-4-1.076 0-2.24.57-3.086 1.414L12 7.828l-1.414-1.414C9.74 5.57 8.576 5 7.5 5 5.56 5 4 6.656 4 9c0 2.944 1.666 5.533 4.645 7.903.745.592 1.54 1.145 2.421 1.7.299.189.595.37.934.572.339-.202.635-.383.934-.571z"></path></svg>
+            <svg class="filled" height="32" width="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0H24V24H0z" fill="none"></path><path d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2z"></path></svg>
+            Previous
+          </button>
+        <button class="next-button" onclick="nextImage()">
+            <svg class="empty" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="none" d="M0 0H24V24H0z"></path><path d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2zm-3.566 15.604c.881-.556 1.676-1.109 2.42-1.701C18.335 14.533 20 11.943 20 9c0-2.36-1.537-4-3.5-4-1.076 0-2.24.57-3.086 1.414L12 7.828l-1.414-1.414C9.74 5.57 8.576 5 7.5 5 5.56 5 4 6.656 4 9c0 2.944 1.666 5.533 4.645 7.903.745.592 1.54 1.145 2.421 1.7.299.189.595.37.934.572.339-.202.635-.383.934-.571z"></path></svg>
+            <svg class="filled" height="32" width="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0H24V24H0z" fill="none"></path><path d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2z"></path></svg>
+            Next
+          </button>
+    </main>
+    <footer>
+        <p> Ro and Khush forevaaa ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
