@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Things About My Girl</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet"> <!-- Add link to Bubblegum Sans font -->
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .vertical-hearts-left,
+.vertical-hearts-right {
+    position: absolute;
+}
+/* Style for the card */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 999;
+    max-width: 80%;
+}
+
+.button-container {
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+.vertical-hearts-left {
+    left: 400px;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: 10%;
+}
+
+.vertical-hearts-right {
+    right: 400px;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: 10%;
+}
+h1 {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 48px;
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 0px;
+}
+        p {
+            font-size: 36px; /* Set font size */
+            text-align: center; /* Center the text */
+            margin-top: 0px; /* Add some top margin */
+            animation: rotateText 3s linear infinite; /* Apply rotation animation */
+        }
+        img {
+            
+            max-width: 500px; /* Set a maximum width */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Make the image a block-level element */
+            margin: 0 auto; /* Center the image horizontally */
+            margin-top: 20px; /* Add margin-top for spacing */
+        }
+
+        .container {
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding-top: 6px; /* Adjusted padding for the navigation bar */
+        }
+
+        .heart {
+            font-size: 24px;
+            color: red;
+            cursor: pointer;
+            transition: transform 0.2s ease-out;
+            margin: 10px; /* Adjusted margin for spacing between hearts */
+        }
+
+        .heart:hover {
+            transform: scale(1.5);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Style for the button */
+        .btn {
+            background-color: #ff0000;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px; /* Increased font size */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #cc0000;
+        }
+
+        /* Style for the pop-up text */
+        .pop-text {
+            font-family: 'Bubblegum Sans', cursive; /* Use Bubblegum Sans font */
+            font-size: 24px; /* Increased font size */
+        }
+        
+        /* Navigation styling */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ff0000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="love_journal.html">Love Journal</a></li>
+                <li><a href="countdown.html">Countdown Till I See You</a></li>
+                <li><a href="favoritethings.html">Favorite Tingz About You</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>My Favorite Things About My Girl</h1>
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="love_journal.html">Love Journal</a></li>
+                <li><a href="countdown.html">Countdown Till I See You</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    </style>
+    
+</head>
+<body>
+    <div class="card" id="heartCard">
+        <p id="heartMessage"></p>
+        <div class="button-container">
+            <button class="btn" onclick="toggleCard()">Send To Your Heart 💌</button>
+        </div>
+    </div>
+    
+    
+    
+    <div class="container">
+        <div class="heart" onclick="togglePopText('popText1')">❤️</div>
+        <div class="hidden pop-text" id="popText1">
+            You make my heart burst with love 💗
+            <br>
+           
+        </div>
+
+        <div class="heart" onclick="togglePopText('popText2')">❤️</div>
+        <div class="hidden pop-text" id="popText2">
+            The way you dress 💃🏽
+            <br>
+
+        </div>
+        
+
+        <!-- Add more hearts and messages here -->
+        <div class="heart" onclick="togglePopText('popText3')">❤️</div>
+        <div class="hidden pop-text" id="popText3">
+            Your beautiful smile lights up my world 😄✨🌎
+            <br>
+           
+        </div>
+
+        <div class="heart" onclick="togglePopText('popText4')">❤️</div>
+        <div class="hidden pop-text" id="popText4">
+            Your caring nature touches my heart in so many ways 💜
+            <br>
+           
+        </div>
+
+        <div class="heart" onclick="togglePopText('popText5')">❤️</div>
+        <div class="hidden pop-text" id="popText5">
+            You're my sunshine on a cloudy day 🌞
+            <br>
+            
+        </div>
+
+        <div class="heart" onclick="togglePopText('popText6')">❤️</div>
+        <div class="hidden pop-text" id="popText6">
+            You always know how to make me laugh 😂
+            <br>
+       
+        </div>
+
+        <div class="heart" onclick="togglePopText('popText7')">❤️</div>
+        <div class="hidden pop-text" id="popText7">
+            Your creativity inspires me every day 🎨✨
+            <br>
+           
+        </div>
+
+        <div class="heart" onclick="togglePopText('popText8')">❤️</div>
+        <div class="hidden pop-text" id="popText8">
+            I love how supportive you are of my dreams and goals 💭🎯
+            <br>
+ 
+        </div>
+
+        <div class="heart" onclick="togglePopText('popText9')">❤️</div>
+        <div class="hidden pop-text" id="popText9">
+            Your sense of humor brightens even the darkest days 🌈😆
+            <br>
+           
+        </div>
+
+        <div class="heart" onclick="togglePopText('popText10')">❤️</div>
+        <div class="hidden pop-text" id="popText10">
+            You're my rock, always there for me when I need you 🤗🏔️
+            <br>
+         
+        </div>
+
+        <div class="heart" onclick="togglePopText('popText11')">❤️</div>
+        <div class="hidden pop-text" id="popText11">
+            Your kindness knows no bounds 💖
+            <br>
+          
+        </div>
+
+        <div class="heart" onclick="togglePopText('popText12')">❤️</div>
+        <div class="hidden pop-text" id="popText12">
+            You're not just my partner, you're my best friend 🌟👭
+            <br>
+          
+        </div>
+
+        <div class="heart" onclick="togglePopText('popText13')">❤️</div>
+        <div class="hidden pop-text" id="popText13">
+            I love how stinky you are lol. My lil Stinkkkkk 💩❤️
+            <br>
+         
+        </div>
+
+        <div class="heart" onclick="togglePopText('popText14')">❤️</div>
+        <div class="hidden pop-text" id="popText14">
+            Your sweet voice that I could listen to all day... Music to my Ears 🎶🎶
+            <br>
+        
+        </div>
+        <div class="heart" onclick="togglePopText('popText15')">❤️</div>
+<div class="hidden pop-text" id="popText15">
+    Your laughter is contagious, filling my heart with joy 😄🎉
+    <br>
+
+</div>
+
+<div class="heart" onclick="togglePopText('popText16')">❤️</div>
+<div class="hidden pop-text" id="popText16">
+    Your intelligence and wisdom inspire me to be better every day 🧠💡
+    <br>
+
+</div>
+
+<div class="heart" onclick="togglePopText('popText17')">❤️</div>
+<div class="hidden pop-text" id="popText17">
+    The way you listen to me and understand my feelings means everything to me 🎧💬
+    <br>
+  
+</div>
+
+<div class="heart" onclick="togglePopText('popText18')">❤️</div>
+<div class="hidden pop-text" id="popText18">
+    Your hugs are my favorite place to be, filled with warmth and love 🤗❤️
+    <br>
+ 
+</div>
+
+<div class="heart" onclick="togglePopText('popText19')">❤️</div>
+<div class="hidden pop-text" id="popText19">
+    Your determination and resilience inspire me to never give up 💪🌟
+    <br>
+
+</div>
+
+<div class="vertical-hearts-left">
+    <div class="heart" onclick="togglePopText('popText34')">❤️</div>
+    <div class="hidden pop-text" id="popText34">
+        Your laughter is like music to my ears, filling every moment with joy and happiness 🎶😄
+        <br>
+       
+    </div>
+
+ 
+
+    <div class="heart" onclick="togglePopText('popText36')">❤️</div>
+    <div class="hidden pop-text" id="popText36">
+        Your intelligence and wit make every conversation with you an enlightening and delightful experience 🧠💬
+        <br>
+ 
+    </div>
+
+    <div class="heart" onclick="togglePopText('popText37')">❤️</div>
+    <div class="hidden pop-text" id="popText37">
+        Your taste in music is impeccable, and I love how we can share our favorite songs and melodies together 🎵🎧
+        <br>
+
+    </div>
+    <div class="heart" onclick="togglePopText('popText44')">❤️</div>
+    <div class="hidden pop-text" id="popText44">
+        Your patience is a virtue that I deeply admire and am grateful for. Your ability to remain calm and understanding in difficult situations brings peace to my heart and strengthens our bond 💖⏳
+        <br>
+        
+    </div>
+
+    <div class="heart" onclick="togglePopText('popText45')">❤️</div>
+    <div class="hidden pop-text" id="popText45">
+        Your exceptional communication skills help us navigate through challenges with ease. The way you listen, understand, and express your feelings makes me feel heard and valued 💬💖
+        <br>
+       
+    </div>
+
+    <div class="heart" onclick="togglePopText('popText46')">❤️</div>
+    <div class="hidden pop-text" id="popText46">
+        Your openness and honesty create a safe and trusting environment where we can share our deepest thoughts and feelings without fear of judgment. Your transparency strengthens our connection and brings us closer together 🗝️💖
+        <br>
+   
+    </div>
+    <div class="heart" onclick="togglePopText('popText46')">❤️</div>
+    <div class="hidden pop-text" id="popText46">
+        Your daily routine is a testament to your discipline, dedication, and self-care. I admire the way you prioritize your well-being and happiness, inspiring me to do the same 💖🌟
+        <br>
+  
+    </div>
+    <div class="heart" onclick="togglePopText('popText46')">❤️</div>
+    <div class="hidden pop-text" id="popText46">
+        Your skin is flawless, like a canvas painted with perfection. Its smoothness and radiance captivate me, leaving me in awe of your natural beauty 💖✨
+        <br>
+        
+    </div>
+    
+
+    <div class="heart" onclick="togglePopText('popText47')">❤️</div>
+    <div class="hidden pop-text" id="popText47">
+        Your beauty is so captivating and mesmerizing that words can hardly do justice to describe it. Every glance at you takes my breath away, leaving me in awe of your radiance and grace 💖✨
+        <br>
+   
+    </div>
+    
+
+    <div class="heart" onclick="togglePopText('popText48')">❤️</div>
+    <div class="hidden pop-text" id="popText48">
+        Your adventurous spirit and willingness to explore new things with me fills my heart with excitement and joy. Whether it's trying new foods, visiting new places, or embarking on new adventures, I cherish every moment spent with you 💖🌍
+        <br>
+   
+    </div>
+
+    <div class="heart" onclick="togglePopText('popText49')">❤️</div>
+    <div class="hidden pop-text" id="popText49">
+        Our intimate moments together are filled with passion, connection, and a deep sense of love and intimacy. You satisfy not only my physical desires but also my emotional needs, making every moment spent with you unforgettable 💖🔥
+        <br>
+     
+    </div>
+
+    <div class="heart" onclick="togglePopText('popText50')">❤️</div>
+    <div class="hidden pop-text" id="popText50">
+        When you wear your glasses and tie your hair in a ponytail, you radiate a unique charm and elegance that takes my breath away. It's a simple yet captivating look that highlights your natural beauty and intelligence 💖👓🎀
+        <br>
+      
+    </div>
+</div>
+
+    <div class="heart" onclick="togglePopText('popText38')">❤️</div>
+    <div class="hidden pop-text" id="popText38">
+        Your determination and perseverance inspire me to reach for my dreams and never give up, no matter the challenges we face 💪🌟
+        <br>
+
+    </div>
+    
+    <div class="heart" onclick="togglePopText('popText20')">❤️</div>
+    <div class="hidden pop-text" id="popText20">
+        Your gentle touch makes my heart skip a beat 💓
+        <br>
+
+    </div>
+    
+    <div class="heart" onclick="togglePopText('popText21')">❤️</div>
+    <div class="hidden pop-text" id="popText21">
+        The way you look at me melts my heart every time 😍
+        <br>
+
+    </div>
+    </div>
+</div>
+
+    
+
+<!-- New section of hearts for the right side -->
+<div class="vertical-hearts-right">
+    <div class="heart" onclick="togglePopText('popText22')">❤️</div>
+    <div class="hidden pop-text" id="popText22">
+        Your kisses are like magic, filling me with love and warmth 💋✨
+        <br>
+    
+    </div>
+    <div class="heart" onclick="togglePopText('popText22')">❤️</div>
+    <div class="hidden pop-text" id="popText22">
+        Your scent is like a sweet melody that lingers in the air, wrapping me in warmth and comfort wherever I go 🌸🌺
+        <br>
+        
+    </div>
+    <div class="heart" onclick="togglePopText('popText24')">❤️</div>
+<div class="hidden pop-text" id="popText24">
+    Your laughter brightens up my day, filling it with joy and happiness 😄🌈
+    <br>
+
+</div>
+
+<div class="heart" onclick="togglePopText('popText25')">❤️</div>
+<div class="hidden pop-text" id="popText25">
+    Your eyes sparkle like stars in the night sky, lighting up my world ✨🌟
+    <br>
+
+</div>
+
+<div class="heart" onclick="togglePopText('popText26')">❤️</div>
+<div class="hidden pop-text" id="popText26">
+    Your kindness towards others makes my heart swell with admiration and love 💖😊
+    <br>
+
+</div>
+
+<div class="heart" onclick="togglePopText('popText27')">❤️</div>
+<div class="hidden pop-text" id="popText27">
+    Your strength during tough times inspires me to be resilient and never give up 💪🌈
+    <br>
+
+</div>
+
+<div class="heart" onclick="togglePopText('popText28')">❤️</div>
+<div class="hidden pop-text" id="popText28">
+    Your touch is like a gentle breeze on a warm summer day, comforting and soothing to my soul 🍃🌞
+    <br>
+
+</div>
+<div class="heart" onclick="togglePopText('popText29')">❤️</div>
+<div class="hidden pop-text" id="popText29">
+    Your cleanliness is admirable, and I love how fresh and tidy you keep everything around you 🧼✨
+    <br>
+
+</div>
+
+<div class="heart" onclick="togglePopText('popText30')">❤️</div>
+<div class="hidden pop-text" id="popText30">
+    The way you make your bed with such care and precision shows your attention to detail ☀️🛏️
+    <br>
+
+</div>
+
+<div class="heart" onclick="togglePopText('popText31')">❤️</div>
+<div class="hidden pop-text" id="popText31">
+    You look absolutely adorable in your cozy slippers, adding a touch of charm to every step you take 💕🥿
+    <br>
+
+</div>
+
+<div class="heart" onclick="togglePopText('popText32')">❤️</div>
+<div class="hidden pop-text" id="popText32">
+    Your love for chocolate is infectious, and I adore seeing the joy it brings you with every indulgent bite 🍫😋
+    <br>
+
+</div>
+
+<div class="heart" onclick="togglePopText('popText33')">❤️</div>
+<div class="hidden pop-text" id="popText33">
+    Your body is a masterpiece, each curve and contour perfectly crafted, and I cherish every moment I spend admiring its beauty 🌺✨
+    <br>
+
+</div>
+
+    <!-- Heart for the right side -->
+
+    
+</div>
+
+    </div>
+    <script>
+       function togglePopText(id) {
+            var popText = document.getElementById(id);
+            var heartMessage = document.getElementById('heartMessage');
+            heartMessage.innerText = popText.innerText; // Update the heart message
+            document.getElementById('heartCard').style.display = 'block'; // Show the card
+        }
+
+        function toggleCard() {
+            var card = document.getElementById('heartCard');
+            card.style.display = 'none'; // Hide the card
+        }
+
+    </script>
+      <img src="fav.jpeg" alt="Fav">
+    <div>
+        <p>Click a heart to send yourself some love 😘</p>
+    </div>
+</body>
+</html>
