@@ -1,0 +1,314 @@
+
+
+.carousel-image video {
+    max-width: 300px; /* Set the maximum width of the video to 100% of its container */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+p {
+    font-family: 'Montserrat', sans-serif; /* Apply the Montserrat font */
+    /* Other styling properties */
+}
+
+.countdown-container {
+    font-family: 'Pacifico', cursive; /* Change font family to Pacifico */
+    text-align: center;
+    padding: 20px;
+}
+
+.countdown {
+    font-family: 'Lobster', cursive; /* Change font family to Lobster */
+    font-size: 32px;
+    color: #ff4d4d; /* Reddish pink color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Add a subtle text shadow */
+}
+
+.countdown-heading {
+    color: #ff7f50;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.countdown-timer {
+    font-size: 20px;
+    color: #333;
+}
+
+.countdown-days {
+    font-weight: bold;
+    color: #ff7f50;
+}
+
+.countdown-separator {
+    margin: 0 5px;
+}
+
+.next-button {
+    
+    right: -100px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 25px 20px 22px;
+    box-shadow: rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-color: #e8e8e8;
+    border-color: #ffe2e2;
+    border-style: solid;
+    border-width: 9px;
+    border-radius: 35px;
+    font-size: 25px;
+    font-weight: 900;
+    color: rgb(134, 124, 124);
+    font-family: monospace;
+    transition: transform 400ms cubic-bezier(.68,-0.55,.27,2.5), border-color 400ms ease-in-out, background-color 400ms ease-in-out;
+    word-spacing: -2px;
+  }
+  
+  @keyframes movingBorders {
+    0% {
+      border-color: #fce4e4;
+    }
+  
+    50% {
+      border-color: #ffd8d8;
+    }
+  
+    90% {
+      border-color: #fce4e4;
+    }
+  }
+  
+  .next-button:hover {
+    background-color: #eee;
+    transform: scale(105%);
+    animation: movingBorders 3s infinite;
+  }
+  
+  .next-button svg {
+    margin-right: 11px;
+    fill: rgb(255, 110, 110);
+    transition: opacity 100ms ease-in-out;
+  }
+  
+  .filled {
+    position: absolute;
+    opacity: 0;
+    top: 20px;
+    left: 22px;
+  }
+  
+  @keyframes beatingHeart {
+    0% {
+      transform: scale(1);
+    }
+  
+    15% {
+      transform: scale(1.15);
+    }
+  
+    30% {
+      transform: scale(1);
+    }
+  
+    45% {
+      transform: scale(1.15);
+    }
+  
+    60% {
+      transform: scale(1);
+    }
+  }
+  
+  .next-button:hover .empty {
+    opacity: 0;
+  }
+  
+  .next-button:hover .filled {
+    opacity: 1;
+    animation: beatingHeart 1.2s infinite;
+  }
+  
+  .carousel-image {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Add transition for opacity and transform */
+}
+
+.carousel-image.active {
+    display: block;
+    opacity: 1;
+    transform: translateX(0); /* Initial position for active image */
+}
+
+.carousel-image.next {
+    transform: translateX(100%); /* Initial position for next image */
+}
+
+.carousel-image.prev {
+    transform: translateX(-100%); /* Initial position for previous image */
+}
+
+/* Other styles remain unchanged */
+
+
+
+img {
+    max-width: 600px; /* Set a maximum width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Resetting default browser styles */
+.container { /* Change to fixed */
+    bottom: -50px; /* Adjust bottom spacing as needed */
+    left: 2%;
+    transform: translateX(-50%);
+    z-index: 1000; /* Ensure it's on top of other content */
+}
+
+.container .preloader {
+    animation: rotate 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+}
+
+@keyframes rotate {
+    50% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
+.preloader span {
+    --c: #f23f3f;
+    position: absolute;
+    display: block;
+    height: 64px;
+    width: 64px;
+    background: var(--c);
+    border: 1px solid var(--c);
+    border-radius: 100%;
+}
+
+.preloader span:nth-child(1) {
+    transform: translate(-28px, -28px);
+    animation: shape_1 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+}
+
+@keyframes shape_1 {
+    60% {
+        transform: scale(0.4);
+    }
+}
+
+.preloader span:nth-child(2) {
+    transform: translate(28px, -28px);
+    animation: shape_2 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+}
+
+@keyframes shape_2 {
+    40% {
+        transform: scale(0.4);
+    }
+}
+
+.preloader span:nth-child(3) {
+    position: relative;
+    border-radius: 0px;
+    transform: scale(0.98) rotate(-45deg);
+    animation: shape_3 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+}
+
+@keyframes shape_3 {
+    50% {
+        border-radius: 100%;
+        transform: scale(0.5) rotate(-45deg);
+    }
+
+    100% {
+        transform: scale(0.98) rotate(-45deg);
+    }
+}
+
+.shadow {
+    position: relative;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    height: 16px;
+    width: 64px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    border: 1px solid #d9d9d9;
+    animation: shadow 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+}
+
+@keyframes shadow {
+    50% {
+        transform: translateX(-50%) scale(0.5);
+        border-color: #f2f2f2;
+    }
+}
+
+/* Other styles remain unchanged */
+
+.container {
+    position: relative; /* Change absolute to relative */
+    margin: 0 auto; /* Center the container horizontally */
+    width: fit-content; /* Adjust width to fit content */
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation styling */
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+    text-align: center; /* Center align the content */
+}
+
+/* Section styling */
+section {
+    margin-bottom: 20px;
+    margin-top: 100px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #ff0000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
